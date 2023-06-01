@@ -1,0 +1,63 @@
+﻿<Window x:Class="Alokmat.A._2.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alokmat.A._2.Desktop"
+ 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="598.429" Width="801.178" Background="GhostWhite" MaxWidth="801.178" MaxHeight="598.429" ScrollViewer.VerticalScrollBarVisibility="Disabled" MinWidth="801.178" MinHeight="598.429">
+    <Grid>
+        <Border Margin="60,10,83,58">
+            <Grid Margin="0,0,-26,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="361*"/>
+                    <RowDefinition Height="140*"/>
+                </Grid.RowDefinitions>
+                <Image HorizontalAlignment="Left" Height="420" Margin="155,-1,-158.8,0" VerticalAlignment="Top" Width="681" Source="Pijesz-będziesz-miał-problemy-z-potencją.jpg" Opacity="0.1" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.109"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0.398"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="Pijesz-będziesz-miał-problemy-z-potencją.jpg" Stretch="Uniform"/>
+                    </Image.OpacityMask>
+                </Image>
+
+                <Button x:Name="AnalizatorStart" Content="Oblicz" HorizontalAlignment="Left" Height="34" Margin="488,32,0,0" VerticalAlignment="Top" Width="164" Background="Red" FontWeight="Bold" FontSize="24" Click="AnalizatorStart_Click"/>
+                <TextBlock x:Name="Polecenie1" HorizontalAlignment="Left" Margin="117,0,0,0" TextWrapping="Wrap" Text="Podaj płeć  :  " VerticalAlignment="Top" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.626,0.631" Width="107"/>
+                <RadioButton x:Name="MężczyznaIndx" Content="Mężczyzna" HorizontalAlignment="Left" Margin="240,4,0,0" VerticalAlignment="Top" Checked="MężczyznaIndx_Checked"/>
+                <RadioButton  x:Name="MężczyznaIndx2" Content="Kobieta" HorizontalAlignment="Left" Margin="339,4,0,0" VerticalAlignment="Top" Checked="MężczyznaIndx2_Checked"/>
+                <TextBlock x:Name="Polecenie2" HorizontalAlignment="Left" Margin="11,43,0,0" TextWrapping="Wrap" Text="Podaj masę ciała [w kg] : " VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                <TextBox x:Name="InsertWaga" HorizontalAlignment="Left" Height="21" Margin="240,46,0,0" TextWrapping="Wrap" Text="np. 54,3" VerticalAlignment="Top" Width="158" FontStyle="Italic"/>
+                <TextBlock x:Name="Polecenie3" HorizontalAlignment="Left" Margin="0,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Width="372" Height="76"><Run Text="Godzina spożycia "/><LineBreak/><Run Text="ostatniej"/><Run Text=" "/><Run Text="porcji alkoholu"/><Run Text=" "/><Run Text=" "/><Run Text=": "/><LineBreak/><Run Text="[zaokrąglenie do godz.]"/></TextBlock>
+                <TextBox x:Name="InsrCzas" HorizontalAlignment="Left" Height="23" Margin="240,114,0,0" TextWrapping="Wrap" Text="np. 12" VerticalAlignment="Top" Width="158" FontStyle="Italic"/>
+                <TextBlock x:Name="Polecenie4" HorizontalAlignment="Left" Margin="0,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Width="462"><Run Text="Co w sumie wypiłeś"/><Run Text=", "/><Run Text="wpisz "/><Run Text="ilości ml"/><Run Text=" "/><Run Text="wg. "/><Run Text="rodzajów"/><LineBreak/><Run Text="alkoholu"/><Run Text="   "/><Run Text=":"/><LineBreak/><Run/><LineBreak/><Run FontStyle="Italic" Text="Jeśli nie spożyłeś nic z danego rodzaju alkoholu pozostaw '0'."/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="42" Margin="437,186,0,0" TextWrapping="Wrap" Text="Piwo" VerticalAlignment="Top" Width="76" TextAlignment="Center"/>
+                <TextBlock x:Name="Polecenie5" HorizontalAlignment="Left" Margin="0,44.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Width="372" Grid.Row="1"><Run Text="Wynik mierzony w promilach"/><Run Text=" :"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="462,228,0,0" TextWrapping="Wrap" Text="Wino" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="462,317,0,0" TextWrapping="Wrap" Text="Bimber" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="462,273,0,0" TextWrapping="Wrap" Text="Wódka" VerticalAlignment="Top"/>
+                <TextBox x:Name="Piwo" HorizontalAlignment="Left" Height="23" Margin="532,184,0,0" TextWrapping="Wrap" Text="np. 3500" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="Wino" HorizontalAlignment="Left" Height="23" Margin="532,227,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="Wódka" HorizontalAlignment="Left" Height="23" Margin="532,266,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="Bimber" HorizontalAlignment="Left" Height="23" Margin="532,310,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" Margin="299,19.2,0,0" TextWrapping="Wrap" Text="w momencie zakończenia spożycia" VerticalAlignment="Top" Width="200" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="548,19.2,0,0" TextWrapping="Wrap" Text="TERAZ" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="1.621,0.421" Grid.Row="1"/>
+                <TextBox x:Name="Uwaga" Height="52" Margin="0,88.2,53.2,-0.2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1"/>
+                <TextBox x:Name="Wynik_godz" HorizontalAlignment="Left" Height="23" Margin="532,45.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Grid.Row="1"/>
+                <TextBox x:Name="Wynik_Czas" HorizontalAlignment="Left" Height="23" Margin="353,45.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Grid.Row="1"/>
+                <CheckBox x:Name="doba" Content="godzina z dnia poprzedniego" HorizontalAlignment="Left" Margin="421,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.379,0.816" Checked="doba_Checked_1"/>
+
+            </Grid>
+        </Border>
+        <TextBox x:Name="PRAWAAUTORSKIE" HorizontalAlignment="Left" Height="33" Margin="252,526,0,0" TextWrapping="Wrap" Text="Sekcja Profilaktyki MOŻW" VerticalAlignment="Top" Width="297" FontStyle="Italic" HorizontalContentAlignment="Center"/>
+        <Button x:Name="Zamknij" Content="Zamknij" HorizontalAlignment="Left" Margin="680,526,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Background="Red" Click="Zamknij_Click" />
+        <Button x:Name="Zeruj" Content="Zeruj" HorizontalAlignment="Left" Margin="548,93,0,0" VerticalAlignment="Top" Width="163" Background="Red" Click="Zeruj_Click" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
